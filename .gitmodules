@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/atam91/simple-blank-project-client.git
+[submodule "server"]
+	path = server
+	url = https://github.com/atam91/simple-blank-project-server.git
