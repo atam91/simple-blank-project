@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  server:
+    image: node:14-slim
+    depends_on:
+      - postgres
+    ports:
+      - 3000:3000
+    volumes:
+      - ./server:/app
+    working_dir: /app
+    command: sh -c "npm i -g pm2 knex && knex migrate:latest && pm2-runtime dev.config.js"
+
+  client:
+    image: node:14-slim
+    depends_on:
+      - server
+    ports:
+      - 8080:8080
+    volumes:
+      - ./client:/app
+    working_dir: /app
+    command: npm run serve
+
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_DB: simple_blank_project
+      POSTGRES_USER: simple_blank_project
+      POSTGRES_PASSWORD: qweqwe
+    ports:
+      - 5432:5432

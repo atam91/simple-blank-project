@@ -6,8 +6,23 @@ Blank for rapid app prototyping. Simple admin CRUDs implementation which can be 
 |       Nodejs/Express PostgreSQL/knex.js                         |        Vue/Vuetify                                              |
 
 
-
 # Project setup
-    git submodule update --init --recursive
+Default user credentials are `root:qweqwe`.
 
-Further instructions in submodules.
+## Automatic project setup
+Run `./prepare.sh` with specified environment such as `--local` or `--docker`.
+
+## Manual project setup
+Run `git submodule update --init --recursive`; Further instructions in submodules.
+
+
+# Project launch
+
+## Project launch for docker
+From simple-blank-project root run `docker-compose up -d --force-recreate`.
+Open [http://localhost:8080](http://localhost:8080) in your browser.
+
+## Project launch for local
+From simple-blank-project/server run `pm2 start dev.config.js`.
+From simple-blank-project/server run `npm run serve`.
+Open [http://localhost:8080](http://localhost:8080) in your browser.
