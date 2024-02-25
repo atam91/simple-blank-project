@@ -5,6 +5,11 @@ Blank for rapid app prototyping. Simple admin CRUDs implementation which can be 
 |:---------------------------------------------------------------:|:---------------------------------------------------------------:|
 |       Nodejs/Express PostgreSQL/knex.js                         |        Vue/Vuetify                                              |
 
+# !!! Important DEPRECATED !!!
+Some technologies are deprecated and have no long future such as Vuetify & Vue2.
+That's why working version locked on node v14 and available only thru docker method of project setup (`./prepare.sh --docker`);
+
+
 
 # Project setup
 Default user credentials are `root:qweqwe`.
